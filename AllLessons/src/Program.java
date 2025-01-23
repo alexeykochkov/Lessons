@@ -91,7 +91,7 @@ public class Program {
      * Задача №8
      */
 
-    public static void stringNumber ( String a, int b) {
+    public static void stringNumber(String a, int b) {
         for (int i = 0; i < b; i++) {
             System.out.println(a);
         }
@@ -100,20 +100,20 @@ public class Program {
     /**
      * Задача №9
      */
-    public static boolean leapOrNot (int year) {
+    public static boolean leapOrNot(int year) {
         boolean leapBool = true;
         if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
             return leapBool;
         } else {
-            return  !leapBool;
+            return !leapBool;
         }
     }
 
     /**
      * Задача №10
      */
-    public static void replaseNumber () {
-        int[] array = {1,1,1,0,0,0};
+    public static void replaseNumber() {
+        int[] array = {1, 1, 1, 0, 0, 0};
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 0) {
                 array[i] = 1;
@@ -128,11 +128,55 @@ public class Program {
     /**
      * Задача №11
      */
+    public static void emptyArray() {
+        int[] array = new int[100];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = 1;
+            array[i] = i + 1;
+        }
+        System.out.println(Arrays.toString(array));
+    }
 
-//    public static void emptyArray () {
-//        int[] array = new int[100];
-//
-//    }
+    /**
+     * Задача №12
+     */
+    public static void multOverTwo() {
+        int[] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 6) {
+                array[i] = array[i] * 2;
+            }
+        }
+        System.out.print(Arrays.toString(array));
+    }
+
+    /**
+     * Задача №13
+     */
+    public static void zeroDiag() {
+        int massiv[][] = new int[8][8];
+        for (int i = 0; i < massiv.length; i++) {
+            for (int j = 0; j < massiv.length; j++) {
+                if (i == j) {
+                    massiv[i][j] = 1;
+                }
+                System.out.print(massiv[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    /**
+     * Задача №14
+     */
+    public static void newArray(int len, int initialValue) {
+        int mass[] = new int[len];
+        for (int i = 0; i < mass.length; i++) {
+            mass[i] = initialValue;
+        }
+        System.out.println(Arrays.toString(mass));
+    }
+
     public static void main(String[] args) {
 
         printThreeWords();
@@ -146,7 +190,7 @@ public class Program {
         whatIsInt(2);
 
         boolean resultBool = whatIsBool(1);
-        System.out.print(resultBool);
+        System.out.println(resultBool);
 
         stringNumber("Строка", 3);
 
@@ -154,5 +198,10 @@ public class Program {
         System.out.print(resulLeapYear);
 
         replaseNumber();
+        emptyArray();
+        multOverTwo();
+        zeroDiag();
+        newArray(10, 3);
+
     }
 }

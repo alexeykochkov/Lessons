@@ -122,7 +122,7 @@ public class Program {
             }
 
         }
-        System.out.print(Arrays.toString(array));
+        System.out.println(Arrays.toString(array));
     }
 
     /**
@@ -147,7 +147,7 @@ public class Program {
                 array[i] = array[i] * 2;
             }
         }
-        System.out.print(Arrays.toString(array));
+        System.out.println(Arrays.toString(array));
     }
 
     /**
@@ -185,7 +185,7 @@ public class Program {
         compareNumbers();
 
         boolean resultInt = tooSumInt(2, 2);
-        System.out.print(resultInt);
+        System.out.println(resultInt);
 
         whatIsInt(2);
 
@@ -195,7 +195,7 @@ public class Program {
         stringNumber("Строка", 3);
 
         boolean resulLeapYear = leapOrNot(2024);
-        System.out.print(resulLeapYear);
+        System.out.println(resulLeapYear);
 
         replaseNumber();
         emptyArray();

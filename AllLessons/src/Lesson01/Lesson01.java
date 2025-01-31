@@ -1,6 +1,8 @@
+package Lesson01;
+
 import java.util.Arrays;
 
-public class Program {
+public class Lesson01 {
     /**
      * Задача №1
      */
@@ -56,11 +58,12 @@ public class Program {
      */
     public static boolean tooSumInt(int a, int b) {
         int c = a + b;
-        boolean bool = true;
-        if (c >= 10 && c <= 20) {
-            return bool;
+         if (c >= 10 && c <= 20) {
+             System.out.println(true);
+            return true;
         } else {
-            return !bool;
+             System.out.println(false);
+             return false;
         }
     }
 
@@ -79,11 +82,12 @@ public class Program {
      * Задача №7
      */
     public static boolean whatIsBool(int a) {
-        boolean bool = true;
         if (a < 0) {
-            return bool;
+            System.out.println(true);
+            return true;
         } else {
-            return !bool;
+            System.out.println(false);
+            return false;
         }
     }
 
@@ -101,11 +105,12 @@ public class Program {
      * Задача №9
      */
     public static boolean leapOrNot(int year) {
-        boolean leapBool = true;
         if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
-            return leapBool;
+            System.out.println(true);
+            return true;
         } else {
-            return !leapBool;
+            System.out.println(false);
+            return false;
         }
     }
 
@@ -170,7 +175,7 @@ public class Program {
      * Задача №14
      */
     public static void newArray(int len, int initialValue) {
-        int mass[] = new int[len];
+        int[] mass = new int[len];
         for (int i = 0; i < mass.length; i++) {
             mass[i] = initialValue;
         }
@@ -183,20 +188,11 @@ public class Program {
         checkSumSign();
         printColor();
         compareNumbers();
-
-        boolean resultInt = tooSumInt(2, 2);
-        System.out.println(resultInt);
-
+        tooSumInt(1,2);
         whatIsInt(2);
-
-        boolean resultBool = whatIsBool(1);
-        System.out.println(resultBool);
-
+        whatIsBool(1);
         stringNumber("Строка", 3);
-
-        boolean resulLeapYear = leapOrNot(2024);
-        System.out.println(resulLeapYear);
-
+        leapOrNot(2024);
         replaseNumber();
         emptyArray();
         multOverTwo();

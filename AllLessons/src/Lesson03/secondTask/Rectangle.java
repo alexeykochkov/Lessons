@@ -4,8 +4,8 @@ public class Rectangle implements Interface{
 
     private int sideA;
     private int sideB;
-    String backgroundColor;
-    String borderColor;
+    private String backgroundColor;
+    private String borderColor;
 
     Rectangle(int sideA, int sideB,  String backgroundColor, String borderColor) {
         this.sideA = sideA;
